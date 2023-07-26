@@ -21,10 +21,10 @@ export default class UserLists extends React.Component {
 
     render()
     {
+        const listsApi = this.state.lists ?? [];
         return (
-            <div>
-                <ListComponent listName={'Minha Lista'}/>
-                <ListComponent listName={'Minha Lista 2'}/>
+            <div>   
+                {listsApi.map(list => <ListComponent key={list.id} listName={list.name}/>)}
             </div>
         );
     }
