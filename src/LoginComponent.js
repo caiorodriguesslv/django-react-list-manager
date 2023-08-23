@@ -4,7 +4,7 @@ import UserLists from "./UserLists";
 export default class LoginComponent extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {username: '', password: ''};
+        this.state = {username: '', password: '', lists: []};
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,11 +47,12 @@ export default class LoginComponent extends React.Component{
             return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                Name:
+                Digite seu usuário:
                 <input type="text" value={this.state.username} onChange={this.handleChange} />
+                Digite sua senha:
                 <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Logar" />
             </form>
             );
         else
