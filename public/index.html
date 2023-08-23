@@ -58,19 +58,13 @@
           var loginSection = document.getElementById('login');
           var rootSection = document.getElementById('root');
 
-          // Exibir a seção de login
           loginSection.style.display = 'block';
 
-          // Rolar até a seção com id="root"
           window.scrollTo({
             top: rootSection.offsetTop,
-            behavior: 'smooth' // Adiciona animação de rolagem suave
+            behavior: 'smooth' 
           });
         }
-        document.getElementById("login-button").addEventListener("click", function () {
-          document.querySelector(".banner").style.display = "none";
-          document.querySelector(".login-form").style.display = "flex";
-        });
       </script>
 
 
