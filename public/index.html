@@ -33,7 +33,7 @@
           <h1>Lista de Compras</h1>
           <p>Aplicativo de listagem de compras utilizando React e Django</p>
           <ul class="actions">
-            <li><a href="#login" class="button alt scrolly big">Login</a></li>
+            <li><a href="#" class="button alt scrolly big" onclick="showLogin()">Login</a></li>
           </ul>
         </div>
       </section>
@@ -53,6 +53,27 @@
       <script src="assets/js/skel.min.js"></script>
       <script src="assets/js/util.js"></script>
       <script src="assets/js/main.js"></script>
+      <script>
+        function showLogin() {
+          var loginSection = document.getElementById('login');
+          var rootSection = document.getElementById('root');
+
+          // Exibir a seção de login
+          loginSection.style.display = 'block';
+
+          // Rolar até a seção com id="root"
+          window.scrollTo({
+            top: rootSection.offsetTop,
+            behavior: 'smooth' // Adiciona animação de rolagem suave
+          });
+        }
+        document.getElementById("login-button").addEventListener("click", function () {
+          document.querySelector(".banner").style.display = "none";
+          document.querySelector(".login-form").style.display = "flex";
+        });
+      </script>
+
 
 </body>
+
 </html>
